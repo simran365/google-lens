@@ -1,0 +1,296 @@
+<html>
+    <head>
+        <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+    
+            <center>
+        <h3 class="btn btn-default heading">Google Lens vs Mobile Net</h3>
+              <br><br>
+        
+              <p style="font-size: 25px;">We will test the images and see which is better. </p>
+        <ol>
+            <div class="test_and_result_of_image col-xs-12">
+
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="Clip.jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output on <b>GOOGLE LENS</b> -
+                It is showing the right item (clip) and it is giving me the results of the image.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                It is also showing the right image (clip).
+                <span></span>
+            </h5>
+
+            <div class="mini-result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Google Lens</h4>
+            </div>
+        </div>
+
+
+        <div class="test_and_result_of_image col-xs-12">
+
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="Gear-CamelBak---credit-CamelBak.webp" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>GOOGLE LENS</b>-
+                It is giving me many results including the price of the water bottle.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                It is showing the right image, although it is not giving me the same results, just the image.
+                <span></span>
+            </h5>
+
+            <div class="mini_result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Google Lens</h4>
+            </div>
+        </div>
+
+
+        <div class="test_and_result_of_image col-xs-12">
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="images (1).jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>GOOGLE LENS</b>-
+                It is not showing me anything, not even the image.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                It is showing me the image, but nothing else.
+                <span></span>
+            </h5>
+
+            <div class="mini_result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Mobilenet Model</h4>
+            </div>
+            
+        </div>
+
+
+        <div class="test_and_result_of_image col-xs-12">
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="images.jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>GOOGLE LENS</b>-
+                same result as before. It is not showng me anything.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                It is showing me the correct image.
+                <span></span>
+            </h5>
+
+            <div class="mini_result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Mobilenet Model</h4>
+            </div>
+        </div>
+
+
+        <div class="test_and_result_of_image col-xs-12">
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="istockphoto-117481166-612x612.jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>GOOGLE LENS</b>-
+                It is showing me the correct images plus some matching images and options to buy as well.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                It is only showing the image.
+                <span></span>
+            </h5>
+
+            <div class="mini_result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Google Lens</h4>
+            </div>
+        </div>
+
+
+        <div class="test_and_result_of_image col-xs-12">
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="istockphoto-463334307-612x612.jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>GOOGLE LENS</b>-
+                It shows me the image and it is giving me the results.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                It only shows the photo. No results.
+                <span></span>
+            </h5>
+
+            <div class="mini_result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Google Lens</h4>
+            </div>
+        </div>
+
+
+        <div class="test_and_result_of_image col-xs-12">
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="istockphoto-1283404396-170667a.jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>GOOGLE LENS</b>-
+                It is showing me simillar images, but it is still giving me buying options.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                Only image is showing.
+                <span></span>
+            </h5>
+
+            <div class="mini_result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Google Lens</h4>
+            </div> 
+        </div>
+
+
+        <div class="test_and_result_of_image col-xs-12">
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="pencil-cartoon-style-vector-illustration_484148-216.webp" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>GOOGLE LENS</b>-
+                It is showing me the same image, but no buying products.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                It is only showing the image.
+                <span></span>
+            </h5>
+
+            <div class="mini_result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Google Lens</h4>
+            </div>
+        </div>
+
+
+        <div class="test_and_result_of_image col-xs-12">
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="Phone-Camera-Webcam-Gear-GettyImages-1241495650.webp" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>GOOGLE LENS</b>-
+                It is showing lots of results and buying options.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                It is only showing the image.
+                <span></span>
+            </h5>
+
+            <div class="mini_result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Google Lens</h4>
+            </div>
+        </div>
+
+
+        <div class="test_and_result_of_image col-xs-12">
+            <li class="col-sm-4 col-xs-12">
+                <b>Test The Image-</b>
+                <img src="photo-1555037015-1498966bcd7c.jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>GOOGLE LENS</b>-
+                It is showing the same image plus some background options.
+                <span></span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12">
+                Output On <b>Mobilenet model</b>-
+                It is showing the correct image.
+                <span></span>
+            </h5>
+
+            <div class="mini_result" class="col-xs-12">
+                <h4>Result -</h4>
+                <hr>
+                <h4>Google Lens
+
+                    I have tested 10 Images total, and out of 10, 2 images were more accuraate with Mobilenet Model and 8 images were more accurate with Google Lens. 
+                    Google lens is more ACCURATE
+                </h4>
+            </div>
+        </div>
+        </ol>
+<div class="copy_right_footer">
+Developed by--- Simran Umatt
+</div>
+
+<script src="main.js"></script>
+    </body>
+</html>
